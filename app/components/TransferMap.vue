@@ -20,6 +20,9 @@ const markers = ref<any[]>([])
 const { state } = useRouteState()
 
 onMounted(() => {
+  (window as any).navermap_authFailure = () => {
+    console.error('[Transo] 네이버 지도 인증 실패 — .env의 NAVER_CLIENT_ID와 NCP 콘솔 Web 서비스 URL을 확인하세요.')
+  }
   initMap()
 })
 
