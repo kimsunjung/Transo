@@ -1,75 +1,36 @@
-# Nuxt Minimal Starter
+# Transo
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+실시간 대중교통 데이터와 네이버 지도를 결합하여, 최적의 환승 타이밍과 성공 확률을 알려주는 대시보드 웹 서비스.
 
-## Setup
+## Tech Stack
 
-Make sure to install dependencies:
+- **Framework**: Nuxt 4 (SSR)
+- **Language**: TypeScript
+- **CSS**: Tailwind CSS
+- **Map**: Naver Maps JavaScript API v3
+- **Transit API**: ODsay
+- **AI**: Google Gemini 2.5 Flash
+
+## Getting Started
 
 ```bash
-# npm
+# 의존성 설치
 npm install
 
-# pnpm
-pnpm install
+# 환경 변수 설정
+cp .env.example .env
+# .env 파일에 API 키 입력
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# 개발 서버 실행
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Environment Variables
 
-Build the application for production:
+`.env.example` 파일을 참고하세요.
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+| 변수 | 설명 |
+|---|---|
+| `NAVER_CLIENT_ID` | 네이버 클라우드 플랫폼 Maps Client ID |
+| `ODSAY_API_KEY` | ODsay 대중교통 경로 API 키 |
+| `GEMINI_API_KEY` | Google Gemini API 키 |
